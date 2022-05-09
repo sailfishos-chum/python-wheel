@@ -1,8 +1,12 @@
 # TODO package pytest
 %bcond_with run_tests
 
+# suffix of python executable (not defined at OBS)
+%global python3_pkgversion 3
+
 %global DISTNAME wheel
-Name:           python-%{DISTNAME}
+# OBS doesn't allow macro in Name
+Name:           python-wheel
 Version:        0.37.1
 Release:        1%{?dist}
 Summary:        Built-package format for Python
